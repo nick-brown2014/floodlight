@@ -1,0 +1,15 @@
+<nav>
+  <%= link_to "Posts", posts_path %>
+  <%= link_to "Videos", videos_path %>
+  <%= link_to "About", user_path(1) %>
+  <%= link_to "Home", root_path %>
+</nav>
+<h1>This is the admin portal, where we will be able to make new posts and upload new videos (which will probably be hosted on the youtube, btw).<h1>
+
+<h3>New Post</h3>
+<%= form_for :post, url: posts_path, method: :post do |f| %>
+  <%= f.text_field :title, placeholder: "Drop a title on that ish" %>
+  <%= f.text_field :text, placeholder: "Content goes here foolio" %>
+  <%= f.submit "Feed them. Feed them with your knowledge" %>
+<% end %>
+<h3>New Video</h3>

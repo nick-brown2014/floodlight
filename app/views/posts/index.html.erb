@@ -1,0 +1,12 @@
+<nav>
+  <%= link_to "Posts", posts_path %>
+  <%= link_to "Videos", videos_path %>
+  <%= link_to "About", users_path(1) %>
+  <%= link_to "Home", root_path %>
+</nav>
+<h1>Posts</h1>
+<p>This where a list of all your posts will appear, sorted by most recent. There will be short blurbs to describe each one, or a teaser of the intro text, whatever is easier.</p>
+<% Post.all.each do |post| %>
+  <%= link_to post.title, post_path(post.id) %>
+<% end %>
+<p>This is the link you will click to make a new post. This will only be available to people with encrypted admin access. Seriously though, it's kind of cool, I can encrypt stuff.</p>

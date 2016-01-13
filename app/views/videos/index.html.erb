@@ -1,0 +1,11 @@
+<nav>
+  <%= link_to "Posts", posts_path %>
+  <%= link_to "Videos", videos_path %>
+  <%= link_to "About", users_path(1) %>
+  <%= link_to "Home", root_path %>
+</nav>
+<h1>Videos</h1>
+<p>This where a list of all your videos will appear.  There are a few ways to do this, the slickest probably being embedding a thumbnail in next to each video and then popping up a video in this window when they click through.</p>
+<% Video.all.each do |video| %>
+  <div class="video_titles"><%= link_to video.title, video_path(video.id) %></div>
+<% end %>
