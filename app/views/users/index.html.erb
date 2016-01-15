@@ -1,6 +1,17 @@
+<script type="text/javascript">
+
+$(document).ready(function() {
+  $("#delete_post").click(function(event) {
+    event.preventDefault();
+    $("#doomed").toggleClass("hidden");
+  });
+})
+
+</script>
+
 <nav>
   <%= link_to "Posts", posts_path %>
-  <%= link_to "Videos", videos_path %>
+  <!--   <%= link_to "Videos", videos_path %> -->
   <%= link_to "About", user_path(1) %>
   <%= link_to "Home", root_path %>
 </nav>
@@ -12,4 +23,11 @@
   <%= f.text_field :text, placeholder: "Content goes here foolio" %>
   <%= f.submit "Feed them. Feed them with your knowledge" %>
 <% end %>
+<h3><a id="delete_post" href="/">Destroy A Post</a></h3>
+<div id="doomed", class="hidden">
+  <% Post.all.each do |post| %>
+    <%= link_to post.title, post_path(post.id), method: :delete %>
+  <% end %>
+</div>
 <h3>New Video</h3>
+<p> Coming soon!</p>
