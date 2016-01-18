@@ -1,1 +1,7 @@
 <h1>Tremble mortals before our mighty password!</h1>
+
+<%= form_for :user, url: users_path, method: :post do |f| %>
+  <%= f.text_field :username, placeholder: "username" %>
+  <%= f.text_field :password, placeholder: "password" %>
+  <%= f.submit "Enter his realm, foolish child" %>
+<% end %>
