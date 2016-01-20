@@ -25,6 +25,12 @@ class PostsController < ApplicationController
   end
 
   def index
+    reverse_rants = Post.all.reverse
+    if reverse_rants.length > 9
+      @recent_rants = reverse_rants
+    else
+      @recent_rants = reverse_rants[0,10]
+    end
   end
 
   def new

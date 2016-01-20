@@ -1,24 +1,31 @@
-<body>
-  <header>
-    <nav>
-      <%= link_to "Rants", posts_path %>
-      <!--   <%= link_to "Videos", videos_path %> -->
-      <%= link_to "About", user_path(1), class: "navline" %>
-      <%= link_to "Home", root_path, class: "navline" %>
-    </nav>
-  </header>
-  <div class="container">
-    <h1>Rants</h1>
-    <p>On everything from how the media is spinning the current news story to </p>
-    <% Post.all.each do |post| %>
+<header>
+  <nav>
+    <%= link_to "Rants", posts_path %>
+    <!--   <%= link_to "Videos", videos_path %> -->
+    <%= link_to "About", user_path(1), class: "navline" %>
+    <%= link_to "Home", root_path, class: "navline" %>
+  </nav>
+</header>
+<div class="container">
+  <%= image_tag "rant_header.png", class: "banner" %>
+  <div class="left_column">
+    <h1 id="rant_header">Floodlight - Rants</h1>
+    <p id="rant_sub">On everything from how the media is spinning the current news story to that thing that made us angry that one time. Ooooh, that thing.</p>
+    <% @recent_rants.each do |rant| %>
       <div class="post">
-        <%= link_to post.title, post_path(post.id) %>
-        <%= post.blurb %>
+        <div class="post_top">
+          <%= link_to rant.title, post_path(rant.id), class: "post_title" %>
+          <p class="post_date"> - <%= rant.date %></p>
+        </div>
+        <p class="sub_post"><%= rant.blurb %></p>
       </div>
     <% end %>
   </div>
-  <footer>
-    <%= link_to "Made by nick-brown-dev.com", url: "http://nick-brown-dev.com" %>
-    <p>Copyright 2016</p>
-  </footer>
-</body>
+  <div class="right_column" id="posts_right_column">
+    <p>Do you have opinions?<br><br>Is there a news story you would like us to analyze?<br><br>Did your cat do something hilarious this morning?<br><br>Tell us about it!</p>
+  </div>
+</div>
+<footer>
+  <%= link_to "Made by nick-brown-dev.com", url: "http://nick-brown-dev.com" %>
+  <p>Copyright 2016</p>
+</footer>

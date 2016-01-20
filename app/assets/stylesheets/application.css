@@ -14,6 +14,48 @@
  *= require_self
  */
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 * {
   font-family: 'Open Sans', sans-serif;
   color: #444444;
@@ -74,6 +116,7 @@ header nav a:hover {
 .container {
   background-color: #F6F6F6;
   padding-top: 90px;
+  padding-bottom: 30px;
   width: 70%;
   padding-left: 5%;
   padding-right: 5%;
@@ -81,9 +124,67 @@ header nav a:hover {
   min-height: 500px;
 }
 
-#landing_banner {
+.layer {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.left_column {
+  width: 69%;
+  display: inline-block;
+  float: left;
+  height: 100%;
+}
+
+.text_wrap {
+  display: table;
+  height: 100%;
+}
+
+.text_wrap p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.left_column_sml {
+  width: 29%;
+  display: inline-block;
+  float: left;
+  height: 100%;
+}
+
+#posts_right_column p {
+  font-size: 0.8em;
+}
+
+.right_column {
+  width: 29%;
+  display: inline-block;
+  float: right;
+}
+
+.right_column_lrg {
+  width: 69%;
+  display: inline-block;
+  float: right;
+  height: 100%;
+}
+
+#posts_right_column {
+  padding-left: 10px;
+  border-left: 1px solid black;
+  margin-top: 30px;
+}
+
+.banner {
   width: 100%;
   padding-bottom: 20px;
+}
+
+#about_banner {
+  border-bottom: 1px solid black;
 }
 
 #landing_header {
@@ -93,19 +194,58 @@ header nav a:hover {
   padding-top: 20px;
 }
 
+#rant_header {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+#rant_sub {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .post {
+  padding-top: 15px;
   display: block;
   width: 90%;
+  margin: auto;
+}
+
+.post_main {
+  padding-top: 15px;
+  display: block;
+  width: 60%;
   margin: auto;
 }
 
 .post_title {
   font-size: 1.2em;
   text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post_title:hover {
+  color: #0000CC;
+}
+
+.post_top {
+  width: 100%;
+  display: block;
 }
 
 .sub_post {
-  font-size: 0.8em;
+  font-size: 0.9em;
+  display: inline-block;
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
+.post_date {
+  font-size: 0.7em;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 footer {
@@ -121,6 +261,10 @@ footer a {
   color: white;
   display: inline-block;
   margin-right: 2.5%;
+}
+
+footer a:hover {
+  color: #9DE1FB;
 }
 
 footer p {
