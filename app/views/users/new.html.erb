@@ -1,7 +1,18 @@
-<h1>Tremble mortals before our mighty password!</h1>
-
-<%= form_for :user, url: users_path, method: :post do |f| %>
-  <%= f.text_field :username, placeholder: "username" %>
-  <%= f.text_field :password, placeholder: "password" %>
-  <%= f.submit "Enter his realm, foolish child" %>
-<% end %>
+<body>
+  <header>
+    <nav>
+      <%= link_to "Rants", posts_path %>
+      <!--   <%= link_to "Videos", videos_path %> -->
+      <%= link_to "About", user_path(1), class: "navline" %>
+      <%= link_to "Home", root_path, class: "navline" %>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Tremble mortals before our mighty password!</h1>
+    <%= form_for :user, url: users_path, method: :post do |f| %>
+      <%= f.text_field :username, placeholder: "username" %>
+      <%= f.text_field :password, placeholder: "password" %>
+      <%= f.submit "Enter his realm, foolish child" %>
+    <% end %>
+  </div>
+</body>

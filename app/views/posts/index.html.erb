@@ -1,11 +1,24 @@
-<nav>
-  <%= link_to "Posts", posts_path %>
-  <!--   <%= link_to "Videos", videos_path %> -->
-  <%= link_to "About", user_path(1) %>
-  <%= link_to "Home", root_path %>
-</nav>
-<h1>Posts</h1>
-<p>This where a list of all your posts will appear, sorted by most recent. There will be short blurbs to describe each one, or a teaser of the intro text, whatever is easier.</p>
-<% Post.all.each do |post| %>
-  <%= link_to post.title, post_path(post.id) %>
-<% end %>
+<body>
+  <header>
+    <nav>
+      <%= link_to "Rants", posts_path %>
+      <!--   <%= link_to "Videos", videos_path %> -->
+      <%= link_to "About", user_path(1), class: "navline" %>
+      <%= link_to "Home", root_path, class: "navline" %>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Rants</h1>
+    <p>On everything from how the media is spinning the current news story to </p>
+    <% Post.all.each do |post| %>
+      <div class="post">
+        <%= link_to post.title, post_path(post.id) %>
+        <%= post.blurb %>
+      </div>
+    <% end %>
+  </div>
+  <footer>
+    <%= link_to "Made by nick-brown-dev.com", url: "http://nick-brown-dev.com" %>
+    <p>Copyright 2016</p>
+  </footer>
+</body>

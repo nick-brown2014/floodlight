@@ -14,6 +14,15 @@
  *= require_self
  */
 
+* {
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+}
+
+html {
+  background-color: white;
+}
+
 .hidden {
   display: none;
 }
@@ -21,4 +30,101 @@
 #delete_post {
   text-decoration: none;
   color: black;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid black;
+  position: fixed;
+  background-color: #444444;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+header nav {
+  position: absolute;
+  right: 5%;
+  height: 100%;
+  padding-left: 200px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9em;
+  height: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  vertical-align: middle;
+  line-height: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+header nav a:hover {
+  color: #9DE1FB;
+}
+
+.navline {
+  border-left: 1px solid white;
+}
+
+.container {
+  background-color: #F6F6F6;
+  padding-top: 90px;
+  width: 70%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: auto;
+  min-height: 500px;
+}
+
+#landing_banner {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+#landing_header {
+  text-align: center;
+  margin: auto;
+  border-top: 1px solid black;
+  padding-top: 20px;
+}
+
+.post {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+.post_title {
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.sub_post {
+  font-size: 0.8em;
+}
+
+footer {
+  height: 50px;
+  background-color: #444444;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+footer a {
+  line-height: 50px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin-right: 2.5%;
+}
+
+footer p {
+  color: white;
+  display: inline-block;
+  margin-left: 2.5%;
 }

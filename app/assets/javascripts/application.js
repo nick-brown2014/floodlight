@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  $("#delete_post").click(function(event) {
+    event.preventDefault();
+    $("#doomed").toggleClass("hidden");
+  });
+
+})

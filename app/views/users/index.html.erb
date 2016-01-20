@@ -1,33 +1,29 @@
-<script type="text/javascript">
+<body>
+  <header>
+    <nav>
+      <%= link_to "Posts", posts_path %>
+      <!--   <%= link_to "Videos", videos_path %> -->
+      <%= link_to "About", user_path(1) %>
+      <%= link_to "Home", root_path %>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>This is the admin portal, where we will be able to make new posts and upload new videos (which will probably be hosted on the youtube, btw).<h1>
 
-$(document).ready(function() {
-  $("#delete_post").click(function(event) {
-    event.preventDefault();
-    $("#doomed").toggleClass("hidden");
-  });
-})
-
-</script>
-
-<nav>
-  <%= link_to "Posts", posts_path %>
-  <!--   <%= link_to "Videos", videos_path %> -->
-  <%= link_to "About", user_path(1) %>
-  <%= link_to "Home", root_path %>
-</nav>
-<h1>This is the admin portal, where we will be able to make new posts and upload new videos (which will probably be hosted on the youtube, btw).<h1>
-
-<h3>New Post</h3>
-<%= form_for :post, url: posts_path, method: :post do |f| %>
-  <%= f.text_field :title, placeholder: "Drop a title on that ish" %>
-  <%= f.text_field :text, placeholder: "Content goes here foolio" %>
-  <%= f.submit "Feed them. Feed them with your knowledge" %>
-<% end %>
-<h3><a id="delete_post" href="/">Destroy A Post</a></h3>
-<div id="doomed", class="hidden">
-  <% Post.all.each do |post| %>
-    <%= link_to post.title, post_path(post.id), method: :delete %>
-  <% end %>
-</div>
-<h3>New Video</h3>
-<p> Coming soon!</p>
+    <h3>New Post</h3>
+    <%= form_for :post, url: posts_path, method: :post do |f| %>
+      <%= f.text_field :title, placeholder: "Drop a title on that ish" %>
+      <%= f.text_field :text, placeholder: "Content goes here foolio" %>
+      <%= f.text_field :blurb, placeholder: "Blurrrrrrrrrbb" %>
+      <%= f.submit "Feed them. Feed them with your knowledge" %>
+    <% end %>
+    <h3><a id="delete_post" href="/">Destroy A Post</a></h3>
+    <div id="doomed", class="hidden">
+      <% Post.all.each do |post| %>
+        <%= link_to post.title, post_path(post.id), method: :delete %>
+      <% end %>
+    </div>
+    <h3>New Video</h3>
+    <p> Coming soon!</p>
+  </div>
+</body>

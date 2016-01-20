@@ -1,8 +1,14 @@
-<nav>
-  <%= link_to "Posts", posts_path %>
-<!--   <%= link_to "Videos", videos_path %> -->
-  <%= link_to "About", user_path(1) %>
-  <%= link_to "Home", root_path %>
-</nav>
-<h1><%= @post.title %></h1>
-<p><%= @post.text %></p>
+<body>
+  <header>
+    <nav>
+      <%= link_to "Rants", posts_path %>
+      <!--   <%= link_to "Videos", videos_path %> -->
+      <%= link_to "About", user_path(1), class: "navline" %>
+      <%= link_to "Home", root_path, class: "navline" %>
+    </nav>
+  </header>
+  <div class="container">
+    <h1><%= @post.title %></h1>
+    <p><%= @post.text %></p>
+  </div>
+</body>
