@@ -15,26 +15,21 @@
 //= require turbolinks
 //= require_tree .
 
-var changeHeight = function() {
-  var height = $(".left_column").height() + 1;
-  $(".left_column").height(height);
-  $(".right_column").height($(".left_column").height());
-}
-
 $(document).ready(function() {
+
+  $(".container").height($("html").height());
+
   $("#delete_post").click(function(event) {
     event.preventDefault();
     $("#doomed").toggleClass("hidden");
   });
 
-  changeHeight();
-
 })
 
 $(window).load(function() {
-  changeHeight();
+  // $(".container").height($("html").height());
 })
 
 $(window).resize(function() {
-  changeHeight();
+  // $(".container").height($("html").height());
 })

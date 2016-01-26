@@ -114,7 +114,6 @@ header nav a:hover {
 }
 
 .container {
-  background-color: #F6F6F6;
   padding-top: 90px;
   padding-bottom: 30px;
   width: 70%;
@@ -124,9 +123,35 @@ header nav a:hover {
   min-height: 500px;
 }
 
+.line {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid black;
+  display: block;
+}
+
+.space {
+  margin-top: 20px;
+  display: block;
+}
+
+.big_space {
+  margin-top: 50px;
+  display: block;
+}
+
+.about_img {
+  height: 100%;
+  width: auto;
+  display: block;
+  margin: auto;
+}
+
 .layer {
   width: 100%;
-  height: 200px;
+  height: 180px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -135,7 +160,6 @@ header nav a:hover {
   width: 69%;
   display: inline-block;
   float: left;
-  height: 100%;
 }
 
 .text_wrap {
@@ -155,6 +179,13 @@ header nav a:hover {
   height: 100%;
 }
 
+.right_column_sml {
+  width: 29%;
+  display: inline-block;
+  float: right;
+  height: 100%;
+}
+
 #posts_right_column p {
   font-size: 0.8em;
 }
@@ -163,6 +194,13 @@ header nav a:hover {
   width: 29%;
   display: inline-block;
   float: right;
+}
+
+.left_column_lrg {
+  width: 69%;
+  display: inline-block;
+  float: left;
+  height: 100%;
 }
 
 .right_column_lrg {
@@ -174,23 +212,19 @@ header nav a:hover {
 
 #posts_right_column {
   padding-left: 10px;
-  border-left: 1px solid black;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .banner {
   width: 100%;
   padding-bottom: 20px;
-}
-
-#about_banner {
-  border-bottom: 1px solid black;
+  padding-top: 20px;
+  background-color: #F6F6F6;
 }
 
 #landing_header {
   text-align: center;
   margin: auto;
-  border-top: 1px solid black;
   padding-top: 20px;
 }
 
@@ -223,7 +257,6 @@ header nav a:hover {
   text-decoration: none;
   display: inline-block;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .post_title:hover {
@@ -238,6 +271,7 @@ header nav a:hover {
 .sub_post {
   font-size: 0.9em;
   display: inline-block;
+  margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid black;
 }
@@ -245,7 +279,63 @@ header nav a:hover {
 .post_date {
   font-size: 0.7em;
   display: inline-block;
+}
+
+.post_show_header {
+  display: inline-block;
   margin-bottom: 10px;
+  font-size: 1.75em;
+}
+
+.post_show_date {
+  display: inline-block;
+}
+
+.post_show_text {
+  width: 85%;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.post_show_link {
+  display: inline-block;
+  font-size: 0.6em;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  background-color: #9DE1FB;
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.post_show_dest {
+  display: inline-block;
+  font-size: 0.6em;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.post_show_link:hover {
+  background-color: black;
+  color: #9DE1FB;
+}
+
+.clear {
+  display: block;
+}
+
+#about_text {
+  width: 80%;
+  margin: auto;
+}
+
+#about_text_bottom {
+  padding-top: 20px;
+  width: 70%;
+  margin: auto;
+  text-align: center;
 }
 
 footer {

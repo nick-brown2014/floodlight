@@ -1,35 +1,46 @@
-<body>
-  <header>
-    <nav>
-      <%= link_to "Rants", posts_path %>
-      <!--   <%= link_to "Videos", videos_path %> -->
-      <%= link_to "About", user_path(1), class: "navline" %>
-      <%= link_to "Home", root_path, class: "navline" %>
-    </nav>
-  </header>
-  <div class="container">
-    <%= image_tag "about_header.png", class: "banner", id:"about_banner" %>
-    <div class="layer">
-      <div class="left_column">
-        <div class="text_wrap">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <div class="right_column">
+<script>
+  $(".container").height($("html").height());
+</script>
+<header>
+  <nav>
+    <%= link_to "Rants", posts_path %>
+    <!--   <%= link_to "Videos", videos_path %> -->
+    <%= link_to "About", user_path(1), class: "navline" %>
+    <%= link_to "Home", root_path, class: "navline" %>
+  </nav>
+</header>
+<div class="container">
+  <%= image_tag "about_header.png", class: "banner", id:"about_banner" %>
+  <p class="clear"><%= link_to "Floodlight", root_path, class: "post_show_link" %> - <span class="post_show_dest">About</span></p>
+  <h1 id="rant_header">Floodlight - About</h1>
+  <div class="line"></div>
+  <p id="about_text">Floodlight will include critiques of current events, observe the political theory present in films, literature, and other media, and dip into a bit of political philosophy a-la “I read Leviathan once.” I will attempt to make it as topical as possible, but at times posts may simply be based on what I’m thinking about, a particular point of philosophical interest, or a critique of something I’ve recently watched or read.<br><br>The purpose of the site will be to examine a comprehensive theory of Ideology — How does it arise and manifest? What is the relationship between ideology and public opinion, and how do socializing entities move in one way or another? Everything I create on this site will move towards answering these questions.<br><br>If you can stand to watch the process, I’d love to have you along for the ride! Follow us on Facebook and Twitter, as we’ll be announcing each post as they come out.<br><br>Thanks for reading! Your support is what makes this worth while.<br><br>- Jeremy Flood</p>
+  <div class="big_space"></div>
+  <h1 id="rant_header">Ok fine, but who are you guys?</h2>
+  <div class="line"></div>
+  <div class="layer">
+    <div class="left_column_lrg">
+      <div class="text_wrap">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </div>
-    <div class="layer">
-      <div class="left_column_sml">
-      </div>
-      <div class="right_column_lrg">
-        <div class="text_wrap">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+    <div class="right_column_sml">
+      <%= image_tag "flood.png", class: "about_img"%>
+    </div>
+  </div>
+  <div class="layer">
+    <div class="left_column_sml">
+      <%= image_tag "nick.png", class: "about_img"%>
+    </div>
+    <div class="right_column_lrg">
+      <div class="text_wrap">
+        <p>Nick Brown is a web developer, creative writer and burrito aficionado living in the Greater Denver area.  When he is not working on Floodlight he is either playing soccer, ultimate frisbee or fighting crime.  You can check out more of his work at <%= link_to "nick-brown-dev.com", url: "http://nick-brown-dev.com" %></p>
       </div>
     </div>
   </div>
-  <footer>
-    <%= link_to "Made by nick-brown-dev.com", url: "http://nick-brown-dev.com" %>
-    <p>Copyright 2016</p>
-  </footer>
-</body>
+  <p id="about_text_bottom">We would love to hear from you, so please feel free to send us a message!</p>
+</div>
+<footer>
+  <%= link_to "Made by nick-brown-dev.com", url: "http://nick-brown-dev.com" %>
+  <p>Copyright 2016</p>
+</footer>

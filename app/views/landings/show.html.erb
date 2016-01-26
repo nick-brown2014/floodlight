@@ -1,28 +1,26 @@
-<body>
-  <header>
-    <nav>
-      <%= link_to "Rants", posts_path %>
-      <!--   <%= link_to "Videos", videos_path %> -->
-      <%= link_to "About", user_path(1), class: "navline" %>
-      <%= link_to "Admin", new_user_path, class: "navline" %>
-    </nav>
-  </header>
-  <div class="container">
-    <%= image_tag "floodlight-header.png", class: "banner" %>
-    <!-- <p>I was at a party one night when I saw a man standing in the corner, giving a lengthy lecture about the importance of local elections to a floor lamp. To my surprise, not only did that lamp vote in the city council run-off, it organized a grass-roots campaign to galvanize and register under-represented demographics in it's congressional district.<br>Such is the power of the man who goes by the name of Jeremy Flood. Seeing this, I was forced into action. Imagine, I thought to myself, if this beacon of political inspiration could be directed at real thinking humans as opposed to household furniture?<br>And so, Floodlight was born. Our mission, to illuminate the treacherous waters of political doublespeak, to cut through the mimsy borogroves of media obfuscation, in short, to shine a light on the important issues facing our political selves.<br>Have you ever wanted to know more about an issue?<br>Have you ever wondered how the media is influencing your understanding of current events?<br>Did you get lost while looking for pictures hamsters eating tiny burritos?<br>Then this site is for you!<br><br><span id="home-small">*knowledge pairs well with a variety of post-rock ballads, contact Jeremy Flood for specifics</span></p> -->
-    <h1 id="landing_header">What We're Ranting About Right Now:</h1>
-    <% @recent_rants.each do |rant| %>
-      <div class="post_main">
-        <div class="post_top">
-          <%= link_to rant.title, post_path(rant.id), class: "post_title" %>
-          <p class="post_date"> - <%= rant.date %></p>
-        </div>
-        <p class="sub_post"><%= rant.blurb %></p>
+<header>
+  <nav>
+    <%= link_to "Rants", posts_path %>
+    <!--   <%= link_to "Videos", videos_path %> -->
+    <%= link_to "About", user_path(1), class: "navline" %>
+    <%= link_to "Admin", new_user_path, class: "navline" %>
+  </nav>
+</header>
+<div class="container">
+  <%= image_tag "floodlight-header.png", class: "banner" %>
+  <!-- <p>I was at a party one night when I saw a man standing in the corner, giving a lengthy lecture about the importance of local elections to a floor lamp. To my surprise, not only did that lamp vote in the city council run-off, it organized a grass-roots campaign to galvanize and register under-represented demographics in it's congressional district.<br>Such is the power of the man who goes by the name of Jeremy Flood. Seeing this, I was forced into action. Imagine, I thought to myself, if this beacon of political inspiration could be directed at real thinking humans as opposed to household furniture?<br>And so, Floodlight was born. Our mission, to illuminate the treacherous waters of political doublespeak, to cut through the mimsy borogroves of media obfuscation, in short, to shine a light on the important issues facing our political selves.<br>Have you ever wanted to know more about an issue?<br>Have you ever wondered how the media is influencing your understanding of current events?<br>Did you get lost while looking for pictures hamsters eating tiny burritos?<br>Then this site is for you!<br><br><span id="home-small">*knowledge pairs well with a variety of post-rock ballads, contact Jeremy Flood for specifics</span></p> -->
+  <h1 id="landing_header">What We're Ranting About Right Now:</h1>
+  <% @recent_rants.each do |rant| %>
+    <div class="post_main">
+      <div class="post_top">
+        <%= link_to rant.title, post_path(rant.id), class: "post_title" %>
+        <p class="post_date"> - <%= rant.date %></p>
       </div>
-    <% end %>
-  </div>
-  <footer>
-    <%= link_to "Made by nick-brown-dev.com", url: "http://nick-brown-dev.com" %>
-    <p>Copyright 2016</p>
-  </footer>
-</body>
+      <p class="sub_post"><%= rant.blurb %></p>
+    </div>
+  <% end %>
+</div>
+<footer>
+  <%= link_to "Made by nick-brown-dev.com", url: "http://nick-brown-dev.com" %>
+  <p>Copyright 2016</p>
+</footer>

@@ -1,3 +1,6 @@
+<script>
+  $(".container").height($("html").height());
+</script>
 <header>
   <nav>
     <%= link_to "Rants", posts_path %>
@@ -8,7 +11,8 @@
 </header>
 <div class="container">
   <%= image_tag "rant_header.png", class: "banner" %>
-  <div class="left_column">
+  <div class="left_column" id="posts_left_column">
+    <p class="clear"><%= link_to "Floodlight", root_path, class: "post_show_link" %> - <span class="post_show_dest">Rants</span></p>
     <h1 id="rant_header">Floodlight - Rants</h1>
     <p id="rant_sub">On everything from how the media is spinning the current news story to that thing that made us angry that one time. Ooooh, that thing.</p>
     <% @recent_rants.each do |rant| %>

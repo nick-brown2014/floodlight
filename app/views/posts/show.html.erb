@@ -1,14 +1,20 @@
-<body>
-  <header>
-    <nav>
-      <%= link_to "Rants", posts_path %>
-      <!--   <%= link_to "Videos", videos_path %> -->
-      <%= link_to "About", user_path(1), class: "navline" %>
-      <%= link_to "Home", root_path, class: "navline" %>
-    </nav>
-  </header>
-  <div class="container">
-    <h1><%= @post.title %></h1>
-    <p><%= @post.text %></p>
-  </div>
-</body>
+<header>
+  <nav>
+    <%= link_to "Rants", posts_path %>
+    <!--   <%= link_to "Videos", videos_path %> -->
+    <%= link_to "About", user_path(1), class: "navline" %>
+    <%= link_to "Home", root_path, class: "navline" %>
+  </nav>
+</header>
+<div class="container">
+  <%= image_tag "rant_header.png", class: "banner" %>
+  <p class="clear"><%= link_to "Floodlight", root_path, class: "post_show_link" %> - <%= link_to "Rants", posts_path, class: "post_show_link" %> - <span class="post_show_dest"><%= @post.title %></span></p>
+  <h1 class="post_show_header"><%= @post.title %></h1>
+  <p class="post_show_date"> - <%= @post.date %></p>
+  <div class="line"></div>
+  <p class="post_show_text"><%= @post.text %></p>
+</div>
+<footer>
+  <%= link_to "Made by nick-brown-dev.com", url: "http://nick-brown-dev.com" %>
+  <p>Copyright 2016</p>
+</footer>
