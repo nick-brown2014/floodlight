@@ -1,6 +1,21 @@
-<h1>We did it! Yay!</h1>
-<%= form_for :message, url: messages_path, method: :post do |f| %>
-  <p>Name (just leave it blank if you don't want to tell us) - </p><%= f.text_field :author %>
-  <p>Message</p><%= f.text_field :text %>
-  <%= f.submit "Submit" %>
-<% end %>
+<header>
+    <nav>
+      <%= link_to "Posts", posts_path %>
+      <!--   <%= link_to "Videos", videos_path %> -->
+      <%= link_to "About", user_path(1), class: "navline"%>
+      <%= link_to "Contact Us", new_message_path, class: "navline" %>
+      <%= link_to "Home", root_path, class: "navline"  %>
+    </nav>
+</header>
+<div class="container">
+  <h1>We did it! Yay!</h1>
+  <%= form_for :message, url: messages_path, method: :post do |f| %>
+    <p>Name (just leave it blank if you don't want to tell us) - </p><%= f.text_field :author %>
+    <p>Message</p><%= f.text_field :text %>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>
+<footer>
+  <%= link_to "Made by nick-brown-dev.com", "http://nick-brown-dev.com" %>
+  <p>Copyright 2016</p>
+</footer>

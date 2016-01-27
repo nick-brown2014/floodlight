@@ -6,6 +6,7 @@
     <%= link_to "Rants", posts_path %>
     <!--   <%= link_to "Videos", videos_path %> -->
     <%= link_to "About", user_path(1), class: "navline" %>
+    <%= link_to "Contact Us", new_message_path, class: "navline" %>
     <%= link_to "Home", root_path, class: "navline" %>
   </nav>
 </header>
@@ -41,6 +42,6 @@
   <p id="about_text_bottom">We would love to hear from you, so please feel free to send us a message!</p>
 </div>
 <footer>
-  <%= link_to "Made by nick-brown-dev.com", url: "http://nick-brown-dev.com" %>
+  <%= link_to "Made by nick-brown-dev.com", "http://nick-brown-dev.com" %>
   <p>Copyright 2016</p>
 </footer>

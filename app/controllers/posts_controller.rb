@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @params = params[:post]
     @post = Post.new(title: @params[:title], text: @params[:text], blurb: @params[:blurb])
     if @post.save
-      redirect_to post_path(@post.id)
+      redirect_to new_link_path
     else
       redirect_to users_path
     end
