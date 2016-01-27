@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :videos
   resources :users
   resources :links
+  resources :messages
 
 end
