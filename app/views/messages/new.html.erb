@@ -7,12 +7,14 @@
       <%= link_to "Home", root_path, class: "navline"  %>
     </nav>
 </header>
-<div class="container">
-  <h1>We did it! Yay!</h1>
+<div class="banner_cont">
+  <%= image_tag "contact.png", class: "banner" %>
+</div>
+<div class="container" id="contact_cont">
   <%= form_for :message, url: messages_path, method: :post do |f| %>
-    <p>Name (just leave it blank if you don't want to tell us) - </p><%= f.text_field :author %>
-    <p>Message</p><%= f.text_field :text %>
-    <%= f.submit "Submit" %>
+    <%= f.text_field :author, placeholder: "Name (just leave it blank if you don't want to tell us)", class: "author" %>
+    <%= f.text_area :text, placeholder: "Message", class: "message" %>
+    <div class="message_clear"><%= f.submit "Submit", class: "message_submit" %></div>
   <% end %>
 </div>
 <footer>

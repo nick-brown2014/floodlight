@@ -7,19 +7,32 @@
     <%= link_to "Home", root_path, class: "navline" %>
   </nav>
 </header>
-<div class="container">
+<div class="banner_cont">
   <%= image_tag "rant_header.png", class: "banner" %>
+</div>
+<div class="container">
   <p class="clear"><%= link_to "Floodlight", root_path, class: "post_show_link" %> - <%= link_to "Rants", posts_path, class: "post_show_link" %> - <span class="post_show_dest"><%= @post.title %></span></p>
+  <div class="space"></div>
   <h1 class="post_show_header"><%= @post.title %></h1>
   <p class="post_show_date"> - <%= @post.date %></p>
   <div class="line"></div>
   <p class="post_show_text"><%= @post.text %></p>
   <div class="big_space"></div>
-  <h2>Sources</h2>
+  <% if @links.length != 0 %>
+    <h1>Sources</h1>
+    <div class="space"></div>
+    <% i = 0 %>
+    <% @post.links.each do |link| %>
+      <% i+=1 %>
+      <p class="links"><%= i %> - <%=link_to link.address, link.address, class: "links" %></p>
+    <% end %>
+  <% end %>
+<p id="about_text_bottom">Want to tell us something about the article? Send us a message!</p>
   <div class="space"></div>
-  <% @post.links.each do |link| %>
-    <%=link_to link.address, link.address %>
-    <br><br>
+  <%= form_for :message, url: messages_path, method: :post do |f| %>
+    <%= f.text_field :author, placeholder: "Name (just leave it blank if you don't want to tell us)", class: "author" %>
+    <%= f.text_area :text, placeholder: "Message", class: "message" %>
+    <div class="message_clear"><%= f.submit "Submit", class: "message_submit" %></div>
   <% end %>
 </div>
 <footer>

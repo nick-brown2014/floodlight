@@ -17,7 +17,7 @@
 
 $(document).ready(function() {
 
-  $(".container").height($("html").height());
+  // $(".container").height($("html").height());
 
   $("#delete_post").click(function(event) {
     event.preventDefault();

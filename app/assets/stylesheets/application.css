@@ -24,7 +24,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -32,9 +32,8 @@ time, mark, audio, video {
   border: 0;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
@@ -51,13 +50,8 @@ q:before, q:after {
   content: '';
   content: none;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Helvetica New', sans-serif;
   color: #444444;
 }
 
@@ -114,13 +108,16 @@ header nav a:hover {
 }
 
 .container {
-  padding-top: 90px;
+  padding-top: 20px;
   padding-bottom: 30px;
   width: 70%;
   padding-left: 5%;
   padding-right: 5%;
   margin: auto;
-  min-height: 500px;
+}
+
+#contact_cont {
+  min-height: 400px;
 }
 
 .line {
@@ -216,10 +213,19 @@ header nav a:hover {
 }
 
 .banner {
-  width: 100%;
+  height: 100%;
+  width: auto;
+  display: block;
+  margin: auto;
   padding-bottom: 20px;
   padding-top: 20px;
-  background-color: #F6F6F6;
+}
+
+.banner_cont {
+  margin-top: 50px;
+  height: 200px;
+  padding-bottom: 40px;
+  background-color: #9DE1FB;
 }
 
 #landing_header {
@@ -266,6 +272,8 @@ header nav a:hover {
 .post_top {
   width: 100%;
   display: block;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
 }
 
 .sub_post {
@@ -273,7 +281,6 @@ header nav a:hover {
   display: inline-block;
   margin-top: 10px;
   padding-top: 10px;
-  border-top: 1px solid black;
 }
 
 .post_date {
@@ -294,6 +301,7 @@ header nav a:hover {
 .post_show_text {
   width: 85%;
   text-align: justify;
+  margin: auto;
   margin-top: 10px;
 }
 
@@ -322,6 +330,12 @@ header nav a:hover {
   color: #9DE1FB;
 }
 
+.links {
+  font-size: 0.9em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .clear {
   display: block;
 }
@@ -335,6 +349,37 @@ header nav a:hover {
   padding-top: 20px;
   width: 70%;
   margin: auto;
+  text-align: center;
+}
+
+.author {
+  width: 70%;
+  margin: auto;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.message {
+  width: 70%;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
+  height: 100px;
+}
+
+.message_submit {
+  margin-top: 5px;
+  width: 10%;
+}
+
+.message_clear {
+  text-align: center;
+  display: block;
+}
+
+.contact_footer {
   text-align: center;
 }
 

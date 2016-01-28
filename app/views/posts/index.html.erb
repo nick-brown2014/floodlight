@@ -1,5 +1,7 @@
 <script>
-  $(".container").height($("html").height());
+  $(document).ready(function() {
+    $(".container").height($("html").height());
+  })
 </script>
 <header>
   <nav>
@@ -10,8 +12,10 @@
     <%= link_to "Home", root_path, class: "navline" %>
   </nav>
 </header>
-<div class="container">
+<div class="banner_cont">
   <%= image_tag "rant_header.png", class: "banner" %>
+</div>
+<div class="container">
   <div class="left_column" id="posts_left_column">
     <p class="clear"><%= link_to "Floodlight", root_path, class: "post_show_link" %> - <span class="post_show_dest">Rants</span></p>
     <h1 id="rant_header">Floodlight - Rants</h1>

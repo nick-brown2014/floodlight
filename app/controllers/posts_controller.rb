@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @links = @post.links
   end
 
   def create
