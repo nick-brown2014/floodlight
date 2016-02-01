@@ -129,6 +129,13 @@ header nav a:hover {
   display: block;
 }
 
+.line_no_space {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid black;
+  display: block;
+}
+
 .space {
   margin-top: 20px;
   display: block;
@@ -254,7 +261,7 @@ header nav a:hover {
 .post_main {
   padding-top: 15px;
   display: block;
-  width: 60%;
+  width: 100%;
   margin: auto;
 }
 
