@@ -3,11 +3,12 @@
       <%= link_to "Posts", posts_path %>
       <!--   <%= link_to "Videos", videos_path %> -->
       <%= link_to "About", user_path(1), class: "navline"%>
-      <%= link_to "Contact Us", new_message_path, class: "navline" %>
+      <%= link_to "Contact Us", new_message_path, class: "navline big_only" %>
+      <%= link_to "Contact", new_message_path, class: "navline small_only" %>
       <%= link_to "Home", root_path, class: "navline"  %>
     </nav>
 </header>
-<div class="banner_cont">
+<div class="banner_cont" id="banner_cont_XL">
   <%= image_tag "contact.png", class: "banner" %>
 </div>
 <div class="container" id="contact_cont">

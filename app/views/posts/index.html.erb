@@ -8,14 +8,15 @@
     <%= link_to "Rants", posts_path %>
     <!--   <%= link_to "Videos", videos_path %> -->
     <%= link_to "About", user_path(1), class: "navline" %>
-    <%= link_to "Contact Us", new_message_path, class: "navline" %>
+    <%= link_to "Contact Us", new_message_path, class: "navline big_only" %>
+    <%= link_to "Contact", new_message_path, class: "navline small_only" %>
     <%= link_to "Home", root_path, class: "navline" %>
   </nav>
 </header>
 <div class="banner_cont">
   <%= image_tag "rant_header.png", class: "banner" %>
 </div>
-<div class="container">
+<div class="container big_only">
   <div class="left_column" id="posts_left_column">
     <p class="clear"><%= link_to "Floodlight", root_path, class: "post_show_link" %> - <span class="post_show_dest">Rants</span></p>
     <h1 id="rant_header">Floodlight - Rants</h1>
@@ -34,6 +35,21 @@
     <p>Send us a message!<br><br>Because how will we know what we got wrong if you don't tell us?</p>
     <%= link_to "Contact Us", new_message_path, class: "post_show_link" %>
   </div>
+</div>
+<div class="container small_only">
+  <p class="clear"><%= link_to "Floodlight", root_path, class: "post_show_link" %> - <span class="post_show_dest">Rants</span></p>
+  <h1 id="rant_header">Floodlight - Rants</h1>
+  <p id="rant_sub">On everything from how the media is spinning the current news story to that thing that made us angry that one time. Ooooh, that thing.</p>
+  <% @recent_rants.each do |rant| %>
+    <div class="post">
+      <div class="post_top">
+        <%= link_to rant.title, post_path(rant.id), class: "post_title" %>
+        <p class="post_date"> - <%= rant.date %></p>
+      </div>
+      <p class="sub_post"><%= rant.blurb %></p>
+    </div>
+  <% end %>
+
 </div>
 <footer>
   <%= link_to "Made by nick-brown-dev.com", "http://nick-brown-dev.com" %>

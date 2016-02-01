@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   def create
     @params = params[:post]
-    @post = Post.new(title: @params[:title], text: @params[:text], blurb: @params[:blurb])
+    @post = Post.new(title: @params[:title], text: @params[:text], blurb: @params[:blurb], date: @params[:date])
     if @post.save
       redirect_to new_link_path
     else

@@ -3,7 +3,8 @@
     <%= link_to "Rants", posts_path %>
     <!--   <%= link_to "Videos", videos_path %> -->
     <%= link_to "About", user_path(1), class: "navline" %>
-    <%= link_to "Contact Us", new_message_path, class: "navline" %>
+    <%= link_to "Contact Us", new_message_path, class: "navline big_only" %>
+    <%= link_to "Contact", new_message_path, class: "navline small_only" %>
     <%= link_to "Home", root_path, class: "navline" %>
   </nav>
 </header>
@@ -18,7 +19,7 @@
   <div class="big_space"></div>
   <h1 id="rant_header">Ok fine, but who are you guys?</h2>
   <div class="line"></div>
-  <div class="layer">
+  <div class="layer big_only">
     <div class="left_column_lrg">
       <div class="text_wrap">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -28,15 +29,25 @@
       <%= image_tag "flood.png", class: "about_img"%>
     </div>
   </div>
-  <div class="layer">
+  <div class="layer big_only">
     <div class="left_column_sml">
       <%= image_tag "nick.png", class: "about_img"%>
     </div>
     <div class="right_column_lrg">
       <div class="text_wrap">
-        <p>Nick Brown is a web developer, creative writer and burrito aficionado living in the Greater Denver area.  When he is not working on Floodlight he is either playing soccer, ultimate frisbee or fighting crime.  You can check out more of his work at <%= link_to "nick-brown-dev.com", url: "http://nick-brown-dev.com" %></p>
+        <p>Nick Brown is a web developer, creative writer and burrito aficionado living in the Greater Denver area.  When he is not working on Floodlight or other projects he is either playing soccer, ultimate frisbee or fighting crime.  You can check out more of his work at <%= link_to "nick-brown-dev.com", url: "http://nick-brown-dev.com" %></p>
       </div>
     </div>
+  </div>
+  <div class="layer small_only">
+    <%= image_tag "flood.png", class: "about_img"%>
+    <div class="space"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div class="layer small_only">
+    <%= image_tag "nick.png", class: "about_img"%>
+    <div class="space"></div>
+    <p>Nick Brown is a web developer, creative writer and burrito aficionado living in the Greater Denver area.  When he is not working on Floodlight or other projects he is either playing soccer, ultimate frisbee or fighting crime.  You can check out more of his work at <%= link_to "nick-brown-dev.com", url: "http://nick-brown-dev.com" %></p>
   </div>
   <p id="about_text_bottom">We would love to hear from you, so please feel free to send us a message!</p>
   <div class="space"></div>

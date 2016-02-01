@@ -407,3 +407,72 @@ footer p {
   display: inline-block;
   margin-left: 2.5%;
 }
+
+.small_only {
+  display: none;
+}
+
+@media (max-width: 800px) {
+
+  .big_only {
+    display: none;
+  }
+
+  .small_only {
+    display: inline-block;
+  }
+
+  header nav {
+    width: 100%;
+    left: 0px;
+    padding-left: 0px;
+    margin-left: 3%;
+  }
+
+  header nav a {
+    width: 22%;
+    display: inline-block;
+    font-size: 1.1em;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .container {
+    width: 90%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 5%;
+  }
+
+  .message_submit {
+    margin-top: 5px;
+    width: 25%;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .banner_cont {
+    height: 110px;
+  }
+
+  #banner_cont_XL {
+    height: 130px;
+  }
+
+}
