@@ -1,4 +1,5 @@
 <header>
+  <a href="http://localhost:3000"><%= image_tag "logo_sml", class: "logo_sml big_only" %></a>
   <nav>
     <%= link_to "Rants", posts_path %>
     <!--   <%= link_to "Videos", videos_path %> -->
@@ -17,7 +18,10 @@
   <h1 class="post_show_header"><%= @post.title %></h1>
   <p class="post_show_date"> - <%= @post.date %></p>
   <div class="line"></div>
-  <p class="post_show_text"><%= @post.text %></p>
+  <% @post.paragraphs.each do |paragraph| %>
+    <p class="post_show_text"><%= paragraph.text %></p>
+    <br>
+  <% end %>
   <div class="big_space"></div>
   <% if @links.length != 0 %>
     <h1>Sources</h1>

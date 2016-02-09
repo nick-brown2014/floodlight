@@ -1,42 +1,40 @@
-<body>
-  <header>
-    <nav>
-      <%= link_to "Posts", posts_path %>
-      <!--   <%= link_to "Videos", videos_path %> -->
-      <%= link_to "About", user_path(1), class: "navline"  %>
-      <%= link_to "Contact Us", new_message_path, class: "navline" %>
-      <%= link_to "Home", root_path, class: "navline"  %>
-    </nav>
-  </header>
-  <div class="container">
-    <h1>You are the god of all you see! This is the well from which your wisdom will flow. Praise be, praise be<h1>
-    <br><br>
-    <h3>New Post</h3>
-    <%= form_for :post, url: posts_path, method: :post do |f| %>
-      <%= f.text_field :title, placeholder: "Drop a title on that ish" %>
-      <%= f.text_field :text, placeholder: "Content goes here foolio" %>
-      <%= f.text_field :blurb, placeholder: "Blurrrrrrrrrbb" %>
-      <%= f.text_field :date, placeholder: "Input date, e.g. January 1, 2016" %>
-      <%= f.submit "Feed them. Feed them with your knowledge" %>
-    <% end %>
-    <br><br>
-    <h3><a id="delete_post" href="/">Destroy A Post</a></h3>
-    <br><br>
-    <div id="doomed", class="hidden">
-      <% Post.all.each do |post| %>
-        <%= link_to post.title, post_path(post.id), method: :delete %>
-        <br>
-      <% end %>
-    </div>
-    <br><br>
-    <h3>You've got mail!</h3>
-    <% Message.all.each do |message| %>
+<header>
+  <a href="http://localhost:3000"><%= image_tag "logo_sml", class: "logo_sml big_only" %></a>
+  <nav>
+    <%= link_to "Posts", posts_path %>
+    <!--   <%= link_to "Videos", videos_path %> -->
+    <%= link_to "About", user_path(1), class: "navline"  %>
+    <%= link_to "Contact Us", new_message_path, class: "navline" %>
+    <%= link_to "Home", root_path, class: "navline"  %>
+  </nav>
+</header>
+<div class="container">
+  <h1>You are the god of all you see! This is the well from which your wisdom will flow. Praise be, praise be<h1>
+  <br><br>
+  <h3>New Post</h3>
+  <%= form_for :post, url: posts_path, method: :post do |f| %>
+    <%= f.text_field :title, placeholder: "Drop a title on that ish" %>
+    <%= f.text_field :blurb, placeholder: "Blurrrrrrrrrbb" %>
+    <%= f.text_field :date, placeholder: "Input date, e.g. January 1, 2016" %>
+    <%= f.submit "Feed them. Feed them with your knowledge" %>
+  <% end %>
+  <br><br>
+  <h3><a id="delete_post" href="/">Destroy A Post</a></h3>
+  <br><br>
+  <div id="doomed", class="hidden">
+    <% Post.all.each do |post| %>
+      <%= link_to post.title, post_path(post.id), method: :delete %>
       <br>
-      <p>Author - <%= message.author %></p>
-      <br>
-      <%= message.text %>
-      <br><br>
-      <%= button_to "Delete", message_path(message.id), method: :delete %>
     <% end %>
   </div>
-</body>
+  <br><br>
+  <h3>You've got mail!</h3>
+  <% Message.all.each do |message| %>
+    <br>
+    <p>Author - <%= message.author %></p>
+    <br>
+    <%= message.text %>
+    <br><br>
+    <%= button_to "Delete", message_path(message.id), method: :delete %>
+  <% end %>
+</div>

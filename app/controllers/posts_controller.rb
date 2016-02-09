@@ -8,9 +8,9 @@ class PostsController < ApplicationController
 
   def create
     @params = params[:post]
-    @post = Post.new(title: @params[:title], text: @params[:text], blurb: @params[:blurb], date: @params[:date])
+    @post = Post.new(title: @params[:title], blurb: @params[:blurb], date: @params[:date])
     if @post.save
-      redirect_to new_link_path
+      redirect_to new_paragraph_path
     else
       redirect_to users_path
     end

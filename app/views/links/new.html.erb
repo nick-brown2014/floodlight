@@ -1,6 +1,8 @@
-<h1>Add your links below. If you are finished adding links, hit "Finished", otherwise hit "Still Going"</h1>
-<%= form_for :link, url: links_path, method: :post do |f| %>
-  <%= f.text_field :address, placeholder: "Address" %>
-  <%= f.submit "Still Going", name: "submit" %>
-  <%= f.submit "Done", name: "done" %>
-<% end %>
+<div class="container">
+  <h1>Add your links below. If you are finished adding links, hit "Finished", otherwise hit "Still Going"</h1>
+  <%= form_for :link, url: links_path, method: :post do |f| %>
+    <%= f.text_field :address, placeholder: "Address" %>
+    <%= f.submit "Still Going", name: "submit" %>
+    <%= f.submit "Done", name: "done" %>
+  <% end %>
+</div>

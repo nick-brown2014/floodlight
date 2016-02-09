@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :users
   resources :links
   resources :messages
+  resources :paragraphs
 
 end

@@ -79,11 +79,20 @@ header {
   z-index: 1;
 }
 
+.logo_sml {
+  height: 40px;
+  widht: auto;
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 5px;
+}
+
 header nav {
   position: absolute;
   right: 5%;
   height: 100%;
   padding-left: 200px;
+  display: inline-block;
 }
 
 header nav a {

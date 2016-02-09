@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Add your paragraphs one at a time below. If you are finished adding paragraphs, hit "Finished", otherwise hit "Still Going"</h1>
+  <%= form_for :paragraph, url: paragraphs_path, method: :post do |f| %>
+    <%= f.text_field :text, placeholder: "Text" %>
+    <%= f.submit "Still Going", name: "submit" %>
+    <%= f.submit "Done", name: "done" %>
+  <% end %>
+</div>
