@@ -1,22 +1,21 @@
-<body>
-  <header>
-    <a href="http://localhost:3000"><%= image_tag "logo_sml", class: "logo_sml big_only" %></a>
-    <nav>
-      <%= link_to "Rants", posts_path %>
-      <!--   <%= link_to "Videos", videos_path %> -->
-      <%= link_to "About", user_path(1), class: "navline" %>
-      <%= link_to "Contact Us", new_message_path, class: "navline big_only" %>
-      <%= link_to "Contact", new_message_path, class: "navline small_only" %>
-      <%= link_to "Home", root_path, class: "navline" %>
-    </nav>
-  </header>
-  <div class="container">
-    <div class="big_space"></div>
-    <h1>Tremble mortals before our mighty password!</h1>
-    <%= form_for :user, url: users_path, method: :post do |f| %>
-      <%= f.text_field :username, placeholder: "username" %>
-      <%= f.text_field :password, placeholder: "password" %>
-      <%= f.submit "Enter his realm, foolish child" %>
-    <% end %>
-  </div>
-</body>
+
+<header>
+  <a href="http://floodlight.us"><%= image_tag "logo_sml", class: "logo_sml big_only" %></a>
+  <nav>
+    <%= link_to "Rants", posts_path %>
+    <!--   <%= link_to "Videos", videos_path %> -->
+    <%= link_to "About", user_path(1), class: "navline" %>
+    <%= link_to "Contact Us", new_message_path, class: "navline big_only" %>
+    <%= link_to "Contact", new_message_path, class: "navline small_only" %>
+    <%= link_to "Home", root_path, class: "navline" %>
+  </nav>
+</header>
+<div class="container">
+  <div class="big_space"></div>
+  <h1>Tremble mortals before our mighty password!</h1>
+  <%= form_for :user, url: users_path, method: :post do |f| %>
+    <%= f.text_field :username, placeholder: "username" %>
+    <%= f.text_field :password, placeholder: "password" %>
+    <%= f.submit "Enter his realm, foolish child" %>
+  <% end %>
+</div>

@@ -116,6 +116,10 @@ header nav a:hover {
   border-left: 1px solid white;
 }
 
+#special_container {
+  padding-top: 70px;
+}
+
 .container {
   padding-top: 20px;
   padding-bottom: 30px;
