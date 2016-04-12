@@ -8,7 +8,6 @@
 
 User.create!(name: 'admin')
 Post.create!(title: 'Original Post', blurb: 'This is what people will see on the front page, limit 300 characters', date: 'January 20, 2016')
-Post.create!(title: 'But wait, what if there is a really long title, is the layout still going to look dope AF?!?', blurb: 'We might as well try out a really long blurb too. This post is supposed to show me all the places where the layout will get messed up yo.', date: 'January 25, 2016')
 Link.create!(post_id: 1, address: "http://google.com")
 Message.create!(author: "Nick Brown", text: "I think you guys are swell. What a nice website. I love you.")
 
