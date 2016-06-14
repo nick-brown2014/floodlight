@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails_12factor', group: :production
 gem 'pry'
+gem 'haml'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use PostGres as the database for Active Record

@@ -1,0 +1,40 @@
+%header
+  = link_to image_tag("logo_sml", class: "logo_sml big_only"), "http://www.floodlight.com"
+  %nav
+    = link_to "Rants", posts_path
+    = link_to "About", user_path(1), class: "navline"
+    = link_to "Contact Us", new_message_path, class: "navline big_only"
+    = link_to "Contact", new_message_path, class: "navline small_only"
+    = link_to "Home", root_path, class: "navline"
+.banner_cont
+  = image_tag "rant_header_clean.png", class: "banner"
+
+.container
+  %p{:class => "clear"} #{link_to "Floodlight", root_path, class: "post_show_link"} - #{link_to "Rants", posts_path, class: "post_show_link"} - <span class="post_show_dest">#{@post.title}</span>
+  .space
+  %h1{:class => "post_show_header"}= @post.title
+  %p{class: "post_show_date"} - #{@post.date}
+  .line
+  - @post.paragraphs.each do |paragraph|
+    %p= simple_format(paragraph.text, :class => "post_show_text")
+    %br
+  .big_space
+  - if @links.length != 0
+    %h1 Sources
+    .space
+    - i = 0
+    - @post.links.each do |link|
+      - i+=1
+      %p{:class => "links"} #{i} #{link_to link.address, link.address, class: "links"}
+.space
+%p{:id => "about_text_bottom"} Want to tell us something about the article? Send us a message!
+.space
+= form_for :message, url: messages_path, method: :post do |f|
+  = f.text_field :author, placeholder: "Name (just leave it blank if you don't want to tell us)", class: "author"
+  = f.text_area :text, placeholder: "Message", class: "message"
+  .message_clear
+    = f.submit "Submit", class: "message_submit"
+.big_space
+%footer
+  = link_to "Made by nick-brown-dev.com", "http://nick-brown-dev.com"
+  %p Copyright 2016
